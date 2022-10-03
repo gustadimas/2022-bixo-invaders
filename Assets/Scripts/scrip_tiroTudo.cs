@@ -7,6 +7,7 @@ public class scrip_tiroTudo : MonoBehaviour
 {
     bool canCollide = false;
     string tagDono;
+    GameObject qualquerCoisa;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,7 +15,22 @@ public class scrip_tiroTudo : MonoBehaviour
         {
             if (collision.gameObject.tag == "Enemy")
             {
-                GameObject.Find("obj_adm").GetComponent<script_admTudo>().ShipDestroy(collision.gameObject.GetComponent<script_enemyTudo>().id);
+                //GameObject.Find("obj_adm").GetComponent<script_admTudo>().ShipDestroy(collision.gameObject.GetComponent<script_enemyTudo>().id);
+
+                LinkedList<GameObject> cu2 = GameObject.Find("obj_adm").GetComponent<script_admTudo>().buceta;
+
+                foreach (GameObject go in cu2)
+                {
+                    if (go.GetInstanceID() == collision.gameObject.GetInstanceID())
+                    {
+                        qualquerCoisa = go;
+                    }
+                }
+                cu2.Remove(qualquerCoisa);
+
+                GameObject.Find("obj_adm").GetComponent<script_admTudo>().ChangeScoreText();
+
+                Destroy(collision.gameObject);
 
                 Destroy(gameObject);
             }
@@ -25,7 +41,6 @@ public class scrip_tiroTudo : MonoBehaviour
             }
         }
     }
-
     public void ControlDamage(string tag)
     {
         canCollide = true;

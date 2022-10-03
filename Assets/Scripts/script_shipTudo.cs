@@ -50,8 +50,6 @@ public class script_shipTudo : MonoBehaviour
         
         rb.velocity = new Vector2(velocity_horizontal, 0);
 
-        //animator.SetBool("Running", Mathf.Abs(rb.velocity.x) > 0.1f || Mathf.Abs(rb.velocity.y) > 0.1f);
-
         if (Input.GetKeyUp(KeyCode.Space) && bulletCanShoot)
         {
             bulletCanShoot = false;
@@ -73,5 +71,5 @@ public class script_shipTudo : MonoBehaviour
     private void BulletReset()
     {
         bulletCanShoot = true;
-    }  
+    }
 }

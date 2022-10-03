@@ -429,7 +429,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -756,7 +756,7 @@ Transform:
   m_LocalScale: {x: 15.100684, y: -0.29, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &853672387
 MonoBehaviour:
@@ -1009,12 +1009,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: 0.9
   offset2: 3
-  prefab_obj_bulletEnemy: {fileID: 2962293727761722619, guid: 47a7ca01beaa9b94d8d46fa4b38cf1f4, type: 3}
   ship: {fileID: 290389298}
   prefab_obj_enemy: {fileID: 7948508900736360820, guid: 8236b2a6dbc8e7c4c82883342be88783, type: 3}
-  lifeBar: {fileID: 853672383}
   textScore: {fileID: 1985568344}
   textStatus: {fileID: 2115804146}
+  quantH: 15
+  quantV: 3
 --- !u!4 &1233030576
 Transform:
   m_ObjectHideFlags: 0
@@ -1483,7 +1483,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'Score : 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7e918b7f880f79f4da7b0c6b28af8d86, type: 2}
   m_sharedMaterial: {fileID: 9155837682712865337, guid: 7e918b7f880f79f4da7b0c6b28af8d86, type: 2}
@@ -1492,7 +1492,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278255610
   m_fontColor: {r: 0.98039216, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
